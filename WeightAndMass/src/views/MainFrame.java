@@ -18,6 +18,9 @@ public class MainFrame extends javax.swing.JFrame {
      */
     public MainFrame() {
         initComponents();
+        //centrar la ventana en la pantalla
+        this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -29,14 +32,14 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        paneBackground = new PanelConFondo("/img/background.gif");
+        lbMainTitle = new javax.swing.JLabel();
+        lbFormula = new javax.swing.JLabel();
         txtMass = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lbExplanation = new javax.swing.JLabel();
+        lbMass = new javax.swing.JLabel();
+        lbkg = new javax.swing.JLabel();
+        lbPlanet = new javax.swing.JLabel();
         cbPlanets = new javax.swing.JComboBox<>();
         btnCalculate = new javax.swing.JButton();
         lbWeight = new javax.swing.JLabel();
@@ -44,27 +47,35 @@ public class MainFrame extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculadora de peso");
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 48)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Cálculo de Peso");
+        paneBackground.setBackground(new java.awt.Color(0, 0, 0));
 
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
-        jLabel2.setText("P = m x g");
+        lbMainTitle.setFont(new java.awt.Font("Century Gothic", 0, 48)); // NOI18N
+        lbMainTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lbMainTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbMainTitle.setText("Cálculo de Peso");
+
+        lbFormula.setFont(new java.awt.Font("Century Gothic", 0, 24)); // NOI18N
+        lbFormula.setForeground(new java.awt.Color(255, 255, 255));
+        lbFormula.setText("P = m x g");
 
         txtMass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("El peso es la masa multiplicada por la gravedad");
+        lbExplanation.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lbExplanation.setForeground(new java.awt.Color(255, 255, 255));
+        lbExplanation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbExplanation.setText("El peso es la masa multiplicada por la gravedad");
 
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel4.setText("Masa:");
+        lbMass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lbMass.setForeground(new java.awt.Color(255, 255, 255));
+        lbMass.setText("Masa:");
 
-        jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel5.setText("kg");
+        lbkg.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lbkg.setForeground(new java.awt.Color(255, 255, 255));
+        lbkg.setText("kg");
 
-        jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel6.setText("Planeta: ");
+        lbPlanet.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lbPlanet.setForeground(new java.awt.Color(255, 255, 255));
+        lbPlanet.setText("Planeta: ");
 
         cbPlanets.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         cbPlanets.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mercurio", "Venus", "Tierra", "Marte", "Júpiter", "Saturno", "Urano", "Neptuno" }));
@@ -78,69 +89,70 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         lbWeight.setFont(new java.awt.Font("Century Gothic", 0, 18)); // NOI18N
+        lbWeight.setForeground(new java.awt.Color(255, 255, 255));
         lbWeight.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout paneBackgroundLayout = new javax.swing.GroupLayout(paneBackground);
+        paneBackground.setLayout(paneBackgroundLayout);
+        paneBackgroundLayout.setHorizontalGroup(
+            paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneBackgroundLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
+                .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneBackgroundLayout.createSequentialGroup()
+                        .addComponent(lbFormula)
                         .addGap(400, 400, 400))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(307, 307, 307))
-                        .addGroup(jPanel1Layout.createSequentialGroup()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jLabel6))
-                                    .addGap(44, 44, 44)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(txtMass)
-                                        .addComponent(cbPlanets, 0, 156, Short.MAX_VALUE)))
-                                .addComponent(lbWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addContainerGap()))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneBackgroundLayout.createSequentialGroup()
+                        .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(paneBackgroundLayout.createSequentialGroup()
+                                .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lbMass, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lbPlanet))
+                                .addGap(44, 44, 44)
+                                .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtMass)
+                                    .addComponent(cbPlanets, 0, 156, Short.MAX_VALUE)))
+                            .addComponent(lbWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(lbkg, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(268, 268, 268))))
+            .addGroup(paneBackgroundLayout.createSequentialGroup()
+                .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneBackgroundLayout.createSequentialGroup()
                         .addGap(258, 258, 258)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lbMainTitle))
+                    .addGroup(paneBackgroundLayout.createSequentialGroup()
                         .addGap(411, 411, 411)
                         .addComponent(btnCalculate)))
-                .addContainerGap(264, Short.MAX_VALUE))
+                .addContainerGap(266, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, paneBackgroundLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(lbExplanation, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(295, 295, 295))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        paneBackgroundLayout.setVerticalGroup(
+            paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneBackgroundLayout.createSequentialGroup()
                 .addGap(55, 55, 55)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbMainTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
-                .addComponent(jLabel2)
+                .addComponent(lbFormula)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(lbExplanation)
                 .addGap(46, 46, 46)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtMass, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel5))
+                    .addComponent(lbMass)
+                    .addComponent(lbkg))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
+                .addGroup(paneBackgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbPlanet)
                     .addComponent(cbPlanets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(40, 40, 40)
                 .addComponent(btnCalculate)
                 .addGap(37, 37, 37)
                 .addComponent(lbWeight)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(66, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -148,14 +160,12 @@ public class MainFrame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(paneBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(paneBackground, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -180,20 +190,20 @@ public class MainFrame extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_btnCalculateActionPerformed
-
     
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalculate;
     private javax.swing.JComboBox<String> cbPlanets;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel lbExplanation;
+    private javax.swing.JLabel lbFormula;
+    private javax.swing.JLabel lbMainTitle;
+    private javax.swing.JLabel lbMass;
+    private javax.swing.JLabel lbPlanet;
     private javax.swing.JLabel lbWeight;
+    private javax.swing.JLabel lbkg;
+    private javax.swing.JPanel paneBackground;
     private javax.swing.JTextField txtMass;
     // End of variables declaration//GEN-END:variables
 }
